@@ -15,6 +15,10 @@
       <h1>Code of Conduct Generator 🦄</h1>
     </header>
     <main id="main">
+      <p class="print-notice">
+        You have to generate a code of conduct first.
+        When you generate ot and press "print", only the code of conduct itself will be printed.
+      </p>
       <div class="controls">
         <h2>Setting up</h2>
         <p>What do you want your Code of Conduct to say?</p>
@@ -63,9 +67,9 @@
         </form>
       </div>
       <article class="result">
-        <p>Here you go!</p>
-        <div id="result"></div>
-        <button type="button" id="again">Start over</button>
+        <p class="noprint">Here you go!</p>
+        <div class="print" id="result"></div>
+        <button class="noprint" type="button" id="again">Start over</button>
       </article>
     </main>
     <footer>

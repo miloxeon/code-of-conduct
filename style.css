@@ -110,3 +110,21 @@ main.done .result {
 main.done .controls {
   display: none;
 }
+
+.print-notice {
+  display: none;
+}
+
+@media print {
+  main:not(.done) .print-notice {
+    display: block;
+  }
+
+  .controls,
+  header,
+  footer,
+  .github-corner,
+  .noprint {
+    display: none;
+  }
+}
