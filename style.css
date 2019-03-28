@@ -1,0 +1,29 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 2;
+}
+
+h1 {
+  margin: 0;
+}
+
+header,
+footer {
+  padding: 0 10px;
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+small {
+  color: #ccc;
+}
