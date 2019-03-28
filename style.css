@@ -6,6 +6,7 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
+  line-height: 1.5;
 }
 
 main {
@@ -26,4 +27,62 @@ footer {
 
 small {
   color: #ccc;
+}
+
+.controls {
+  padding: 10px 20px;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.settings {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+label + label {
+  margin-top: 10px;
+}
+
+input {
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  color: white;
+  margin: 20px 0;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+	letter-spacing: .01em;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+
+  transition:
+    box-shadow .2s cubic-bezier(.25, .8, .25, 1),
+    transform .2s cubic-bezier(.25, .8, .25, 1);
+}
+
+button:hover,
+button:focus {
+  outline: none;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, .2);
+}
+
+button:active {
+  outline: none;
+  transform: translateY(2px);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
 }
