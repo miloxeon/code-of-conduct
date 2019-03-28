@@ -108,3 +108,4 @@ document.getElementById('settings').addEventListener('submit', e => {
 })
 
 document.getElementById('again').addEventListener('click', () => window.location.reload())
+document.getElementById('print').addEventListener('click', () => window.print())

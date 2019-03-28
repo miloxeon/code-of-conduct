@@ -17,13 +17,25 @@ h1 {
   margin: 0;
 }
 
-header,
+p:first-of-type {
+  margin-top: 0;
+}
+
+header {
+  padding: 0 10px;
+  max-width: 800px;
+  margin: 50px auto;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
 footer {
   padding: 0 10px;
   max-width: 800px;
   margin: 20px auto;
   text-align: center;
 }
+
 
 small {
   color: #ccc;
@@ -32,7 +44,7 @@ small {
 .controls {
   padding: 10px 20px;
   max-width: 600px;
-  margin: 20px auto;
+  margin: 0 auto;
 }
 
 .settings {
@@ -127,4 +139,12 @@ main.done .controls {
   .noprint {
     display: none;
   }
+}
+
+.pillbox {
+  margin: 20px -10px;
+}
+
+.pillbox > * {
+  margin: 10px;
 }
