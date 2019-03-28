@@ -57,6 +57,7 @@ const template = params => `
   ${params['graphics'] ? "<li>Demonstrating the graphics or any other content you know may be considered disturbing</li>" : ""}
   ${params['politics'] ? "<li>Starting and/or participating in arguments related to politics</li>" : ""}
   ${params['inequality'] ? "<li>Assuming or promoting any kind of inequality including but not limited to: age, body size, disability, ethnicity, gender identity and expression, nationality and race, personal appearance, religion, or sexual identity and orientation</li>" : ""}
+  ${params['drugs'] ? "<li>Drug promotion of any kind</li>" : ""}
   ${params['tastes'] ? "<li>Attacking personal tastes</li>" : ""}
   <li>
     Other conduct which you know could reasonably be
@@ -96,6 +97,7 @@ document.getElementById('settings').addEventListener('submit', e => {
     'graphics': document.getElementById('graphics').checked,
     'politics': document.getElementById('politics').checked,
     'inequality': document.getElementById('inequality').checked,
+    'drugs': document.getElementById('drugs').checked,
     'tastes': document.getElementById('tastes').checked,
     'org-name': document.getElementById('org-name').value,
     'email': document.getElementById('email').value
