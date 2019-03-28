@@ -14,7 +14,7 @@
     <header>
       <h1>Code of Conduct Generator 🦄</h1>
     </header>
-    <main id="main" class="done">
+    <main id="main">
       <div class="controls">
         <h2>Setting up</h2>
         <p>What do you want your Code of Conduct to say?</p>
@@ -23,30 +23,38 @@
           opinionated topics. Which of this should be forbidden?
         </p>
         <form id="settings" class="settings">
-          <label>
+          <label class="group">
             <input type="checkbox" name="sex">
             Sexual behavior or imagery
           </label>
-          <label>
+          <label class="group">
             <input type="checkbox" name="swearing">
             Strong language and swearing
           </label>
-          <label>
+          <label class="group">
             <input type="checkbox" name="graphics">
             Graphics and disturbing content
           </label>
-          <label>
+          <label class="group">
             <input type="checkbox" name="politics">
             Politics
           </label>
-          <label>
+          <label class="group">
             <input type="checkbox" name="inequality">
             Inequality of any kind
           </label>
-          <label>
+          <label class="group">
             <input type="checkbox" name="tastes">
             Attacking tastes
           </label>
+          <div class="group">
+            <label for="name">Your organization name:</label>
+            <input type="text" name="org-name" placeholder="The Unicorn Speedshop" class="field" required>
+          </div>
+          <div class="group">
+            <label for="name">Abuse reporting email:</label>
+            <input type="email" name="email" placeholder="hello@unicornspeedshop.org" class="field" required>
+          </div>
           <button>Done</button>
         </form>
       </div>

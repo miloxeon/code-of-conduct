@@ -47,13 +47,21 @@ label {
   cursor: pointer;
 }
 
-label + label {
+.group + .group {
   margin-top: 10px;
 }
 
 input {
   margin-right: 5px;
   cursor: pointer;
+}
+
+.field {
+  border: 1px solid #ccc;
+  padding: 5px 7px;
+  border-radius: 5px;
+  min-width: 250px;
+  margin-top: 5px;
 }
 
 button {
