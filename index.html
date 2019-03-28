@@ -14,7 +14,7 @@
     <header>
       <h1>Code of Conduct Generator 🦄</h1>
     </header>
-    <main>
+    <main id="main" class="done">
       <div class="controls">
         <h2>Setting up</h2>
         <p>What do you want your Code of Conduct to say?</p>
@@ -47,13 +47,13 @@
             <input type="checkbox" name="tastes">
             Attacking tastes
           </label>
-          <button class="fancy-button bg-gradient1">
-            <span>Done</span>
-          </button>
+          <button>Done</button>
         </form>
       </div>
-      <article id="result">
+      <article class="result">
         <p>Here you go!</p>
+        <div id="result"></div>
+        <button type="button" id="again">Start over</button>
       </article>
     </main>
     <footer>

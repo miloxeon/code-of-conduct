@@ -86,3 +86,19 @@ button:active {
   transform: translateY(2px);
   box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
 }
+
+.result {
+  padding: 10px 20px;
+  max-width: 600px;
+  margin: 20px auto;
+
+  display: none;
+}
+
+main.done .result {
+  display: block;
+}
+
+main.done .controls {
+  display: none;
+}
