@@ -90,18 +90,24 @@ const template = params => `
 
 document.getElementById('settings').addEventListener('submit', e => {
   e.preventDefault()
+  //
+  // const params = {
+  //   'sex': document.getElementById('sex').checked,
+  //   'swearing': document.getElementById('swearing').checked,
+  //   'graphics': document.getElementById('graphics').checked,
+  //   'politics': document.getElementById('politics').checked,
+  //   'inequality': document.getElementById('inequality').checked,
+  //   'drugs': document.getElementById('drugs').checked,
+  //   'tastes': document.getElementById('tastes').checked,
+  //   'org-name': document.getElementById('org-name').value,
+  //   'email': document.getElementById('email').value
+  // }
 
-  const params = {
-    'sex': document.getElementById('sex').checked,
-    'swearing': document.getElementById('swearing').checked,
-    'graphics': document.getElementById('graphics').checked,
-    'politics': document.getElementById('politics').checked,
-    'inequality': document.getElementById('inequality').checked,
-    'drugs': document.getElementById('drugs').checked,
-    'tastes': document.getElementById('tastes').checked,
-    'org-name': document.getElementById('org-name').value,
-    'email': document.getElementById('email').value
-  }
+  let params = {}
+
+  Array.prototype.slice.call(document.getElementsByClassName('data')).forEach(
+    node => { params[node.getAttribute('id')] = node.value }
+  )
 
   document.getElementById('main').classList.add('done')
   document.getElementById('result').innerHTML = template(params)
