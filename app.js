@@ -93,7 +93,7 @@ document.getElementById('settings').addEventListener('submit', e => {
 
   let params = {}
   Array.prototype.slice.call(document.getElementsByClassName('data')).forEach(
-    node => { params[node.getAttribute('id')] = node.checked }
+    node => { params[node.getAttribute('id')] = node.type === 'checkbox' ? node.checked : node.value  }
   )
 
   document.getElementById('main').classList.add('done')
