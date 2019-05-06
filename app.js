@@ -93,7 +93,7 @@ document.getElementById('settings').addEventListener('submit', e => {
 
   let params = {}
   Array.prototype.slice.call(document.getElementsByClassName('data')).forEach(
-    node => { params[node.getAttribute('id')] = node.value }
+    node => { params[node.getAttribute('id')] = node.checked }
   )
 
   document.getElementById('main').classList.add('done')
