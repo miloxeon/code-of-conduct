@@ -87,18 +87,50 @@ const template = params => `
   This Code of Conduct is adapted from <a href="https://dev.to/code-of-conduct">dev.to</a>.
 </p>
 `
-
-document.getElementById('settings').addEventListener('submit', e => {
+const appState = {
+  params: {}
+}
+const copyButton = document.getElementById('copy')
+const result = document.getElementById('result')
+const settings = document.getElementById('settings')
+const main = document.getElementById('main')
+settings.addEventListener('submit', e => {
   e.preventDefault()
 
-  let params = {}
+
   Array.prototype.slice.call(document.getElementsByClassName('data')).forEach(
-    node => { params[node.getAttribute('id')] = node.type === 'checkbox' ? node.checked : node.value  }
+    node => { appState.params[node.getAttribute('id')] = node.type === 'checkbox' ? node.checked : node.value  }
   )
 
-  document.getElementById('main').classList.add('done')
-  document.getElementById('result').innerHTML = template(params)
+  main.classList.add('done')
+  new ClipboardJS('.copy-to-clipboard');
+  const turndownService = new TurndownService()
+  const html = template(appState.params)
+  const markdown = turndownService.turndown(html)
+  appState.output = {
+    html,
+    markdown
+  }
+  copyButton.dataset.clipboardText = html
+  result.innerHTML = html
 })
+
+Array.prototype.slice.call(document.querySelectorAll('.export-options input')).forEach(
+  node => { node.addEventListener('change', (e) => {
+    const { value: exportType } = e.target
+    const { output } = appState
+    switch (exportType) {
+      case "markdown":
+        copyButton.dataset.clipboardText = output.markdown
+        result.innerHTML = `<code>${output.markdown.replace(/\n/g, '<br>')}</code>`
+        break;
+      case "html":
+      default:
+        copyButton.dataset.clipboardText = output.html
+        result.innerHTML = output.html
+    }
+  })}
+)
 
 document.getElementById('again').addEventListener('click', () => window.location.reload())
 document.getElementById('print').addEventListener('click', () => window.print())

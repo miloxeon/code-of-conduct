@@ -9,6 +9,9 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.min.css">
     <link rel="stylesheet" href="style.css">
+
+    <script src="https://unpkg.com/turndown/dist/turndown.js"></script>
+    <script src="https://unpkg.com/clipboard@2/dist/clipboard.min.js"></script>
   </head>
   <body>
     <header>
@@ -59,7 +62,7 @@
             Attacking tastes
           </label>
           <div class="group">
-            <label for="name">Your organization name:</label>
+            <label for="org-name">Your organization name:</label>
             <input type="text" id="org-name" placeholder="The Unicorn Speedshop" class="field data" required>
           </div>
           <div class="group">
@@ -73,6 +76,13 @@
         <div class="pillbox noprint">
           <span>Here you go!</span>
           <button id="print">Print this</button>
+          <button id="copy" class="copy-to-clipboard">Copy to clipboard</button>
+          <div class="export-options">
+            <input type="radio" id="html" name="export" value="html" checked>
+            <label for="html">HTML</label>
+            <input type="radio" id="markdown" name="export" value="markdown">
+            <label for="markdown">Markdown</label>
+          </div>
         </div>
         <div class="print" id="result"></div>
         <button class="noprint" type="button" id="again">Start over</button>

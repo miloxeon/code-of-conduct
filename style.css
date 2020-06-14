@@ -148,3 +148,7 @@ main.done .controls {
 .pillbox > * {
   margin: 10px;
 }
+
+.export-options label{
+  display: inline-block;
+}
