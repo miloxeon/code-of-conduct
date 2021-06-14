@@ -49,8 +49,8 @@ const template = params => `
   </li>
   <li>
     Not being respectful to reasonable communication
-    boundaries, such as 'leave me alone,' 'go away,'
-    or 'I’m not discussing this with you.'
+    boundaries, such as "leave me alone", "go away"
+    or "I’m not discussing this with you".
   </li>
   ${params['sex'] ? "<li>The usage of sexualised language or imagery and unwelcome sexual attention or advances</li>" : ""}
   ${params['swearing'] ? "<li>Swearing, usage of strong or disturbing language</li>" : ""}
